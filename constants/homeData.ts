@@ -18,15 +18,25 @@ export const FEATURE_CARDS = [
     icon: "menu"
   },
   {
-    id: "about",
-    title: "О Нас",
-    description: "Узнайте больше о нашей истории, традициях и философии",
+    id: "contacts",
+    title: "Контакты",
+    description: "Свяжитесь с нами любым удобным способом",
     gradient: "from-orange-500 to-red-600",
     buttonText: "Узнать больше",
     buttonVariant: "secondary" as const,
-    href: "/about",
+    href: "/contacts",
     icon: "building"
-  }
+  },
+  // {
+  //   id: "about",
+  //   title: "О Нас",
+  //   description: "Узнайте больше о нашей истории, традициях и философии",
+  //   gradient: "from-orange-500 to-red-600",
+  //   buttonText: "Узнать больше",
+  //   buttonVariant: "secondary" as const,
+  //   href: "/about",
+  //   icon: "building"
+  // }
 ];
 
 export const FEATURES = [

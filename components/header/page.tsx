@@ -1,7 +1,15 @@
+"use client";
 import Link from "next/link";
 import { PhoneIcon, MapPinIcon, ClockIcon } from "../icons";
+import { useState } from "react";
 
 export default function Header() {
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
+    };
+
     return (
         <header className="bg-white shadow-lg sticky top-0 z-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,10 +24,10 @@ export default function Header() {
                             <MapPinIcon className="w-4 h-4" />
                             <span>Минск, пр-т Любимова, 10</span>
                         </div>
-                        <div className="flex items-center space-x-2">
+                        {/* <div className="flex items-center space-x-2">
                             <ClockIcon className="w-4 h-4" />
                             <span>Ежедневно с 12:00</span>
-                        </div>
+                        </div> */}
                     </div>
                     <div className="flex items-center space-x-4">
                         <div className="flex items-center space-x-1">
@@ -62,9 +70,9 @@ export default function Header() {
                         <Link href="/menu" className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium">
                             Меню
                         </Link>
-                        <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium">
+                        {/* <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium">
                             О нас
-                        </Link>
+                        </Link> */}
                         <Link href="/contacts" className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium">
                             Контакты
                         </Link>
@@ -72,13 +80,53 @@ export default function Header() {
 
                     {/* Мобильная кнопка меню */}
                     <div className="md:hidden">
-                        <button className="text-gray-700 hover:text-blue-600 transition-colors duration-200">
+                        <button 
+                            onClick={toggleMobileMenu}
+                            className="text-gray-700 hover:text-blue-600 transition-colors duration-200 p-2"
+                            aria-label="Открыть меню"
+                        >
                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                             </svg>
                         </button>
                     </div>
                 </div>
+
+                {/* Мобильное меню */}
+                {isMobileMenuOpen && (
+                    <div className="md:hidden border-t border-gray-200 bg-white">
+                        <div className="px-2 pt-2 pb-3 space-y-1">
+                            <Link 
+                                href="/" 
+                                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                Главная
+                            </Link>
+                            <Link 
+                                href="/menu" 
+                                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                Меню
+                            </Link>
+                            <Link 
+                                href="/about" 
+                                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                О нас
+                            </Link>
+                            <Link 
+                                href="/contacts" 
+                                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                Контакты
+                            </Link>
+                        </div>
+                    </div>
+                )}
             </div>
         </header>
     );

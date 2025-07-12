@@ -79,7 +79,6 @@ export default function Contacts() {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-            {/* Hero секция */}
             <section className="relative bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20 lg:py-32">
                 <div className="absolute inset-0 bg-black/20"></div>
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -277,12 +276,12 @@ export default function Contacts() {
                                     <HeartIcon />
                                 </Icon>
                             </div>
-                            <h3 className="text-xl font-semibold text-gray-900 mb-4">Кейтеринг</h3>
+                            <h3 className="text-xl font-semibold text-gray-900 mb-4">Свадебные мероприятия</h3>
                             <p className="text-gray-600 mb-4">
-                                Организуем выездное обслуживание для ваших мероприятий и праздников
+                                Организуем свадебные мероприятия на любой вкус и бюджет
                             </p>
                             <button className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors duration-200">
-                                Узнать больше
+                                Подробнее
                             </button>
                         </Card>
 
@@ -292,12 +291,12 @@ export default function Contacts() {
                                     <MenuIcon />
                                 </Icon>
                             </div>
-                            <h3 className="text-xl font-semibold text-gray-900 mb-4">Доставка</h3>
+                            <h3 className="text-xl font-semibold text-gray-900 mb-4">Развлечения</h3>
                             <p className="text-gray-600 mb-4">
-                                Доставляем блюда в любую точку города в течение 60 минут
+                                Различные развлекательные программы для ваших гостей
                             </p>
                             <button className="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-colors duration-200">
-                                Заказать доставку
+                                Узнать больше
                             </button>
                         </Card>
                     </div>
@@ -319,11 +318,10 @@ export default function Contacts() {
                     <div className="space-y-6">
                         <Card className="p-6 hover:shadow-xl transition-shadow duration-300">
                             <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                                Можно ли забронировать столик онлайн?
+                                Разрешено ли курить в зале?
                             </h3>
                             <p className="text-gray-600">
-                                Да, вы можете забронировать столик через наш сайт или по телефону.
-                                Онлайн бронирование доступно 24/7.
+                                Разрешено, есть зал для некурящих
                             </p>
                         </Card>
 
@@ -333,7 +331,6 @@ export default function Contacts() {
                             </h3>
                             <p className="text-gray-600">
                                 Да, у нас есть бесплатная парковка для гостей ресторана.
-                                Парковка рассчитана на 20 автомобилей.
                             </p>
                         </Card>
 
@@ -342,28 +339,26 @@ export default function Contacts() {
                                 Принимаете ли вы карты?
                             </h3>
                             <p className="text-gray-600">
-                                Да, мы принимаем все основные банковские карты: Visa, MasterCard,
-                                American Express, а также карты местных банков.
+                                Да, мы принимаем все основные банковские карты
                             </p>
                         </Card>
 
                         <Card className="p-6 hover:shadow-xl transition-shadow duration-300">
                             <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                                Можно ли заказать блюда на вынос?
+                                Владеет ли персонал английским языком?
                             </h3>
                             <p className="text-gray-600">
-                                Да, мы предлагаем услугу "на вынос". Вы можете заказать блюда
-                                по телефону или через наш сайт.
+                                Да, наш персонал владеет английским языком
                             </p>
                         </Card>
 
                         <Card className="p-6 hover:shadow-xl transition-shadow duration-300">
                             <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                                Есть ли у вас детское меню?
+                                Какие у вас организационные возможности?
                             </h3>
                             <p className="text-gray-600">
-                                Да, у нас есть специальное детское меню с блюдами,
-                                которые понравятся самым маленьким гостям.
+                                Мы предоставляем широкий спектр организационных возможностей для ваших мероприятий:
+                                Банкетное обслуживание, Вечеринки, Выездное обслуживание, Деловые переговоры, День Рождения, Конференция, Корпоративное обслуживание, Презентации, Свадьба, Семинар, Фуршет, Мальчишник, Девичник, Выпускной
                             </p>
                         </Card>
                     </div>
